@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d56f183-9c9f-45a7-8b11-b43d412cf10e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/giris/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/giris/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/giris/package.json" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,7 +30,7 @@
         <counts>
           <entry key="LICENSE" value="1" />
           <entry key="editorconfig" value="1" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="js" value="5" />
           <entry key="json" value="2" />
         </counts>
@@ -35,48 +39,32 @@
         <counts>
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="5" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="241" />
+          <entry key="gitignore" value="9" />
+          <entry key="js" value="392" />
           <entry key="json" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="25" />
-          <entry key="JavaScript" value="241" />
+          <entry key="JavaScript" value="392" />
+          <entry key="PLAIN_TEXT" value="9" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/giris/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.editorconfig">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/giris/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="10" />
+            <state relative-caret-position="224">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -99,8 +87,9 @@
         <option value="$PROJECT_DIR$/giris/index.js" />
         <option value="$PROJECT_DIR$/giris/asd.js" />
         <option value="$PROJECT_DIR$/giris/package.json" />
-        <option value="$PROJECT_DIR$/giris/app.js" />
         <option value="$PROJECT_DIR$/.editorconfig" />
+        <option value="$PROJECT_DIR$/giris/app.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -109,14 +98,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/giris/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/giris/package.json" />
-    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="30" />
@@ -136,11 +117,6 @@
             <path>
               <item name="graphql-egitim-seti" type="b2602c69:ProjectViewProjectNode" />
               <item name="graphql-egitim-seti" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graphql-egitim-seti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graphql-egitim-seti" type="462c0819:PsiDirectoryNode" />
-              <item name="giris" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -186,13 +162,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5433000" />
+    <option name="totallyTimeSpent" value="6548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="30" y="23" width="1250" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19528072" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18795769" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -204,7 +180,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.329927" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -221,17 +197,10 @@
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/giris/index.js" />
     <entry file="file://$PROJECT_DIR$/giris/asd.js" />
     <entry file="file://$PROJECT_DIR$/giris/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/giris/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -244,6 +213,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
