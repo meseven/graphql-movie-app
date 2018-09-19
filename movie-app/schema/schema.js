@@ -30,6 +30,24 @@ const movies = [
 	}
 ];
 
+const directors = [
+	{
+		id: '1',
+		name: 'Francis Ford Coppola',
+		birth: 1939
+	},
+	{
+		id: '2',
+		name: 'Quentin Tarantino',
+		birth: 1963
+	},
+	{
+		id: '3',
+		name: 'Brian De Palma',
+		birth: 1940
+	}
+];
+
 const MovieType = new GraphQLObjectType({
 	name: 'Movie',
 	fields: () => ({
@@ -37,6 +55,15 @@ const MovieType = new GraphQLObjectType({
 		title: { type: GraphQLString },
 		description: { type: GraphQLString },
 		year: { type: GraphQLInt }
+	})
+});
+
+const DirectorType = new GraphQLObjectType({
+	name: 'Director',
+	fields: () => ({
+		id: { type: GraphQLID },
+		name: { type: GraphQLString },
+		birth: { type: GraphQLInt }
 	})
 });
 
@@ -48,6 +75,13 @@ const RootQuery = new GraphQLObjectType({
 			args: { id: { type: GraphQLID } },
 			resolve(parent, args){
 				return _.find(movies, { id: args.id });
+			}
+		},
+		director: {
+			type: DirectorType,
+			args: { id: { type: GraphQLID } },
+			resolve(parent, args){
+				return _.find(directors, { id: args.id });
 			}
 		}
 	}
