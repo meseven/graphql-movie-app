@@ -113,6 +113,18 @@ const RootQuery = new GraphQLObjectType({
 			resolve(parent, args){
 				return _.find(directors, { id: args.id });
 			}
+		},
+		movies: {
+			type: new GraphQLList(MovieType),
+			resolve(parent, args){
+				return movies;
+			}
+		},
+		directors: {
+			type: new GraphQLList(DirectorType),
+			resolve(parent, args){
+				return directors;
+			}
 		}
 	}
 });
