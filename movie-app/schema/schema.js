@@ -6,7 +6,8 @@ const {
 	GraphQLObjectType,
 	GraphQLString,
 	GraphQLInt,
-	GraphQLID
+	GraphQLID,
+	GraphQLList
 } = graphql;
 
 const movies = [
@@ -30,6 +31,20 @@ const movies = [
 		description: 'The lives of two mob hitmen, a boxer, a gangster\'s wife, and a pair of diner bandits intertwine in four tales of violence and redemption.',
 		year: 1994,
 		directorId:'2'
+	},
+	{
+		id: '4',
+		title: 'Apocalypse Now',
+		description: 'During the Vietnam War, Captain Willard is sent on a dangerous mission into Cambodia to assassinate a renegade Colonel who has set himself up as a god among a local tribe.',
+		year: 1979,
+		directorId: '1'
+	},
+	{
+		id: '5',
+		title: 'Reservoir Dogs',
+		description: 'After a simple jewelry heist goes terribly wrong, the surviving criminals begin to suspect that one of them is a police informant.',
+		year: 1979,
+		directorId: '3'
 	}
 ];
 
@@ -72,7 +87,13 @@ const DirectorType = new GraphQLObjectType({
 	fields: () => ({
 		id: { type: GraphQLID },
 		name: { type: GraphQLString },
-		birth: { type: GraphQLInt }
+		birth: { type: GraphQLInt },
+		movies: {
+			type: new GraphQLList(MovieType),
+			resolve(parent, args){
+				return _.filter(movies, { directorId: parent.id });
+			}
+		}
 	})
 });
 
