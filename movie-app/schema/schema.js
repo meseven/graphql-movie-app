@@ -77,7 +77,33 @@ const RootQuery = new GraphQLObjectType({
 	}
 });
 
+const Mutation = new GraphQLObjectType({
+	name: 'Mutation',
+	fields: {
+		addMovie: {
+			type: MovieType,
+			args: {
+				title: { type: GraphQLString },
+				description: { type: GraphQLString },
+				year: { type: GraphQLInt },
+				directorId: { type: GraphQLString }
+			},
+			resolve(parent, args){
+				const movie = new Movie({
+					title: args.title,
+					description: args.description,
+					year: args.year,
+					directorId: args.directorId
+				});
+
+				return movie.save();
+			}
+		}
+	}
+});
+
 module.exports = new GraphQLSchema({
-	query: RootQuery
+	query: RootQuery,
+	mutation: Mutation
 });
 
