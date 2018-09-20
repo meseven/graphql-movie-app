@@ -98,6 +98,21 @@ const Mutation = new GraphQLObjectType({
 
 				return movie.save();
 			}
+		},
+		addDirector: {
+			type: DirectorType,
+			args: {
+				name: { type: GraphQLString },
+				birth: { type: GraphQLInt },
+			},
+			resolve(parent, args){
+				const director = new Director({
+					name: args.name,
+					birth: args.birth,
+				});
+
+				return director.save();
+			}
 		}
 	}
 });
