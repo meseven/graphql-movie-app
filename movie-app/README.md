@@ -1,6 +1,6 @@
 # Node.JS + React + GraphQL Movie App
 
-## Node.JS Server
+## 1- Node.JS Server
 
 ### How to install
 Clone this repo and go to server folder.
@@ -27,7 +27,7 @@ and go to [localhost:5000/graphql](http://localhost:5000/graphql)
 
 
 
-## React Client
+## 2- React Client
 
 ### How to install
 ```ruby 
