@@ -8,7 +8,7 @@ Clone this repo and go to server folder.
 ```ruby 
 cd server
 npm install
-``
+```
 
 ### Enviroment variables
 Create a file named ".env" in the root directory and fill its contents as follows.
