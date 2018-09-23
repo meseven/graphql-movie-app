@@ -1,9 +1,20 @@
 import React, {Component} from 'react';
 
-class MovieList extends Component {
-	state = {};
+import { gql } from 'apollo-boost';
+import { graphql } from 'react-apollo';
 
+const getMoviesQuery = gql`
+	{
+		movies{
+			title,
+			description
+		}
+	}
+`;
+
+class MovieList extends Component {
 	render() {
+		console.log(this.props);
 		return (
 			<div>
 				<ul className="movie-list">
@@ -14,4 +25,4 @@ class MovieList extends Component {
 	}
 }
 
-export default MovieList;
+export default graphql(getMoviesQuery)(MovieList);
