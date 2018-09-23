@@ -3,6 +3,7 @@ import './App.css';
 
 // components
 import MovieList from './components/MovieList';
+import NewMovieForm from './components/NewMovieForm';
 
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
@@ -17,6 +18,7 @@ class App extends Component {
 			<ApolloProvider client={client}>
 				<div className="App">
 					<MovieList />
+					<NewMovieForm/>
 				</div>
 			</ApolloProvider>
     );
