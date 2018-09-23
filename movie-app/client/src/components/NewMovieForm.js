@@ -6,33 +6,46 @@ import { Query } from 'react-apollo';
 import { getDirectorsQuery } from '../queries/queries';
 
 class NewMovieForm extends Component {
+	state = {
+		title: '',
+		description: '',
+		year: null,
+		directorId: ''
+	};
+
+	onChange = (e) => {
+		this.setState({
+			[e.target.name]: e.target.value
+		});
+	};
+
 	render() {
 		return (
 			<div>
 				<form>
 					<div>
 						<label>Title</label>
-						<input type="text" name="title" placeholder="Title"/>
+						<input type="text" name="title" onChange={this.onChange} placeholder="Title"/>
 					</div>
 					<div>
 						<label>Description</label>
-						<textarea name="description" placeholder="Description"/>
+						<textarea name="description" onChange={this.onChange} placeholder="Description"/>
 					</div>
 					<div>
 						<label>Year</label>
-						<input type="text" name="year" placeholder="Year"/>
+						<input type="text" name="year" onChange={this.onChange} placeholder="Year"/>
 					</div>
 					<div>
 						<label>Director</label>
-						<select name="director" id="director">
-							<option>Choose Director</option>
+						<select name="directorId" onChange={this.onChange} >
+							<option disabled={true}>Choose Director</option>
 							<Query query={getDirectorsQuery}>
 								{({ loading, error, data }) => {
 									if (loading) return <option disabled={true}>Loading...</option>;
 									if (error) return <option disabled={true}>Error.</option>;
 
 									return data.directors.map(({ id, name }) => (
-										<option key={id}>
+										<option key={id} value={id}>
 											{name}
 										</option>
 									))
