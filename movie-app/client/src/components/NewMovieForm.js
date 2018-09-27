@@ -39,19 +39,15 @@ class NewMovieForm extends Component {
 								});
 							} }>
 								<div>
-									<label>Title</label>
 									<input type="text" name="title" onChange={this.onChange} placeholder="Title"/>
 								</div>
 								<div>
-									<label>Description</label>
 									<textarea name="description" onChange={this.onChange} placeholder="Description"/>
 								</div>
 								<div>
-									<label>Year</label>
 									<input type="text" name="year" onChange={this.onChange} placeholder="Year"/>
 								</div>
 								<div>
-									<label>Director</label>
 									<select name="directorId" onChange={this.onChange} >
 										<option disabled={true}>Choose Director</option>
 										<Query query={getDirectorsQuery}>
@@ -72,10 +68,9 @@ class NewMovieForm extends Component {
 									<button type="submit">Submit</button>
 								</div>
 							</form>
-
-							{ loading && <div>Loading...</div>}
-							{ error && <div>Error!</div>}
 						</div>
+						{ loading && <div>Loading...</div>}
+						{ error && <div>Error!</div>}
 					</div>
 				) }
 			</Mutation>

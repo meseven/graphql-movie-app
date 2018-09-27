@@ -2,6 +2,35 @@
     display: flex;
     align-items: center;
 }
+
+form div{
+    padding: 4px 0;
+    text-align: right;
+}
+form div label{
+    display: block;
+}
+
+form div input{
+    width: 100%;
+    height:26px;
+    border: solid 1px #E7EEF8;
+    text-indent: 3px;
+}
+
+form div textarea{
+    width: 240px;
+    height:66px;
+    border: solid 1px #E7EEF8;
+}
+
+form div select{
+    width: 100%;
+    height:26px;
+    border: solid 1px #E7EEF8;
+    text-indent: 3px;
+}
+
 .container {
     width: 100%;
     height: 100%;
@@ -108,12 +137,10 @@ li:nth-child(5) {
 .content {
     border-radius: .4rem;
     padding: 1rem;
+    cursor:pointer;
 }
 
-.clickable {
-    cursor: pointer;
-}
-.clickable .bg {
+.active .bg {
     border: solid 5px rgba(152, 182, 225, 0.5);
 }
 
