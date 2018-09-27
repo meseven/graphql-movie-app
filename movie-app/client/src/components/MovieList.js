@@ -7,21 +7,26 @@ import { getMoviesQuery } from '../queries/queries';
 class MovieList extends Component {
 	render() {
 		return (
-			<div>
-				<ul className="movie-list">
-					<Query query={getMoviesQuery}>
-						{({ loading, error, data }) => {
-							if (loading) return <div>Loading...</div>;
-							if (error) return <div>Error.</div>;
+			<div className="container" data-state="Movie App">
+				<div className="device" data-view="list">
+					<ul className="movie-list layer" data-layer="list">
+						<Query query={getMoviesQuery}>
+							{({ loading, error, data }) => {
+								if (loading) return <div>Loading...</div>;
+								if (error) return <div>Error.</div>;
 
-							return data.movies.map(({ id, title }) => (
-								<li key={id}>
-									{title}
-								</li>
-							))
-						}}
-					</Query>
-				</ul>
+								return data.movies.map(({ id, title, description }) => (
+									<li className="content" key={id}>
+										<div className="bg"></div>
+										<div className="avatar"></div>
+										<div className="title">{title}</div>
+										<p>{ description }</p>
+									</li>
+								))
+							}}
+						</Query>
+					</ul>
+				</div>
 			</div>
 		);
 	}
