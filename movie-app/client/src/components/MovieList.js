@@ -37,7 +37,7 @@ class MovieList extends Component {
 			<div className="container" data-state="Movie App">
 
 				<Modal
-					title="Basic Modal"
+					title="Detail"
 					visible={this.state.visible}
 					onOk={this.handleOk}
 					onCancel={this.handleCancel}
@@ -57,11 +57,17 @@ class MovieList extends Component {
 								if (loading) return <div>Loading...</div>;
 								if (error) return <div>Error.</div>;
 
-								this.setState({
-									activeTitle: 	data.movie.description
-								});
 								return <div>
-									<p>{data.movie.description}</p>
+									<h3>{ data.movie.title }</h3>
+									<p>{ data.movie.year }</p>
+									<p>{ data.movie.description }</p>
+									<br/>
+									<h4>{ data.movie.director.name }</h4>
+									{
+										data.movie.director.movies.map(movie => (
+											<div>{movie.title}</div>
+										))
+									}
 								</div>
 							}}
 						</Query>
