@@ -75,6 +75,7 @@ ul {
     list-style-type: none;
     color: #000;
     margin: auto;
+    margin-bottom: 0!important;
 }
 
 li {
@@ -271,7 +272,12 @@ p {
     position: relative;
 }
 
-body {
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,10 +285,6 @@ body {
     font-family: monospace;
 }
 
-body, html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+form *{
+    font-size: 0.8rem!important;
 }
