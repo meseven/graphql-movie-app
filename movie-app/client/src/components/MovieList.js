@@ -2,20 +2,21 @@ import React, {Component} from 'react';
 import { Query } from 'react-apollo';
 
 // queries
-import { getMoviesQuery } from '../queries/queries';
+import { getMoviesQuery, getMovieQuery } from '../queries/queries';
 
 import { Button, Modal } from 'antd';
 import 'antd/dist/antd.css';
 
 class MovieList extends Component {
 	state = {
-		visible: false
+		visible: false,
+		activeId: ''
 	};
 
 	showModal = id => {
-		console.log(id);
 		this.setState({
 			visible: true,
+			activeId: id
 		});
 	};
 
@@ -34,6 +35,7 @@ class MovieList extends Component {
 	render() {
 		return (
 			<div className="container" data-state="Movie App">
+
 				<Modal
 					title="Basic Modal"
 					visible={this.state.visible}
@@ -45,10 +47,27 @@ class MovieList extends Component {
 						</Button>,
 					]}
 				>
-					<p>Some contents...</p>
-					<p>Some contents...</p>
-					<p>Some contents...</p>
+
+					<div>
+						<Query
+							query={getMovieQuery}
+							variables={{ id: this.state.activeId }}>
+
+							{({ loading, error, data }) => {
+								if (loading) return <div>Loading...</div>;
+								if (error) return <div>Error.</div>;
+
+								this.setState({
+									activeTitle: 	data.movie.description
+								});
+								return <div>
+									<p>{data.movie.description}</p>
+								</div>
+							}}
+						</Query>
+					</div>
 				</Modal>
+
 				<div className="device" data-view="list">
 					<ul className="movie-list layer" data-layer="list">
 						<Query query={getMoviesQuery}>
