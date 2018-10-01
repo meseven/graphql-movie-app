@@ -63,11 +63,17 @@ class MovieList extends Component {
 									<p>{ data.movie.description }</p>
 									<br/>
 									<h4>{ data.movie.director.name }</h4>
+
+									<ul className="director-list">
 									{
 										data.movie.director.movies.map(movie => (
-											<div>{movie.title}</div>
+											<li key={movie.id}>
+												<div className="bg"></div>
+												<div className="title">{movie.title}</div>
+											</li>
 										))
 									}
+									</ul>
 								</div>
 							}}
 						</Query>

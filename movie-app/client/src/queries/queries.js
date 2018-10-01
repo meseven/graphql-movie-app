@@ -29,6 +29,7 @@ export const getMovieQuery = gql`
 			director{
 				name,
 				movies{
+					id,
 					title
 				}
 			}
