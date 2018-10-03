@@ -21,23 +21,33 @@ class NewMovieForm extends Component {
 
 	render() {
 		return (
-			<Mutation mutation={newMovieMutation}>
+			<Mutation
+				mutation={newMovieMutation}
+				onCompleted={() => {
+					this.formRef.reset();
+				}}
+			>
 				{ (addMovie, { loading, error }) => (
 
 					<div className="container" data-state="New Movie">
 						<div className="device" data-view="list">
-							<form onSubmit={ e => {
-								e.preventDefault();
-								addMovie({
-									variables: {
-										title: this.state.title,
-										description: this.state.description,
-										year: parseInt(this.state.year, 10),
-										directorId: this.state.directorId
-									},
-									refetchQueries: [{ query: getMoviesQuery }]
-								});
-							} }>
+							<form
+								ref={el => {
+									this.formRef = el;
+								}}
+								onSubmit={ e => {
+									e.preventDefault();
+									addMovie({
+										variables: {
+											title: this.state.title,
+											description: this.state.description,
+											year: parseInt(this.state.year, 10),
+											directorId: this.state.directorId
+										},
+										refetchQueries: [{ query: getMoviesQuery }]
+									});
+								} }
+							>
 								<div>
 									<input type="text" name="title" onChange={this.onChange} placeholder="Title"/>
 								</div>

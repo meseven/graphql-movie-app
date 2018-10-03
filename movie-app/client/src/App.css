@@ -287,6 +287,10 @@ p {
     position: relative;
 }
 
+button{
+    line-height: normal!important;
+}
+
 body, html {
     height: 100%;
     width: 100%;
