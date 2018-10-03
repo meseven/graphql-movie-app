@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 
 // dotenv
-require('dotenv').config()
+require('dotenv').config();
 
 // db
 const db = require('./helpers/db.js')();
