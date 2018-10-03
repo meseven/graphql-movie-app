@@ -1,22 +1,44 @@
 const express = require('express');
 const cors = require('cors');
-const expressGraphQL = require('express-graphql');
+//const expressGraphQL = require('express-graphql');
+const { graphiqlExpress, graphqlExpress } = require('apollo-server-express');
+const { makeExecutableSchema } = require('graphql-tools');
 
-const schema = require('./schema/schema');
+//const schema = require('./schema/schema');
 
 const app = express();
-
 app.use(cors());
 
-// dotenv
-require('dotenv').config()
+// enviroment variables
+require('dotenv').config();
 
-// db
+// db connecion
 const db = require('./helpers/db.js')();
 
-app.use('/graphql', expressGraphQL({
+// Mongo schemas
+const Movie = require('./models/Movie');
+const Director = require('./models/Director');
+
+// typeDefs and resolvers
+const { typeDefs } = require('./graphql/schema');
+const { resolvers } = require('./graphql/resolvers');
+
+// Create schema
+const schema = makeExecutableSchema({
+	typeDefs,
+	resolvers
+});
+
+app.use('/graphiql', graphiqlExpress({
+	endpointURL: '/graphql'
+}));
+
+app.use('/graphql', graphqlExpress({
 	schema,
-	graphiql: true
+	context: {
+		Movie,
+		Director
+	}
 }));
 
 app.listen(5000, () => {
