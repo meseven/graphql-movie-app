@@ -1,4 +1,5 @@
 const express = require('express');
+const cron = require('./cron');
 const cors = require('cors');
 const expressGraphQL = require('express-graphql');
 
@@ -13,6 +14,8 @@ require('dotenv').config();
 
 // db
 const db = require('./helpers/db.js')();
+
+cron.init();
 
 app.use('/graphql', expressGraphQL({
 	schema,
