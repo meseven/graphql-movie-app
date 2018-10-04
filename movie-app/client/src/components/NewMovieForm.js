@@ -10,7 +10,7 @@ class NewMovieForm extends Component {
 		title: '',
 		description: '',
 		year: null,
-		directorId: ''
+		directorId: '5ba385c3aa53b4d508653aaa'
 	};
 
 	onChange = (e) => {
