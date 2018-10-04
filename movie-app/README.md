@@ -8,7 +8,6 @@
 
 ## 1- Node.JS Server
 
-### How to install
 Clone this repo and go to server folder.
 
 ```ruby 
@@ -35,7 +34,7 @@ and go to [localhost:5000/graphql](http://localhost:5000/graphql)
 
 ## 2- React Client
 
-### How to install
+Clone this repo and go to client folder.
 ```ruby 
 cd client
 npm install
