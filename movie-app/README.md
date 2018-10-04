@@ -1,4 +1,5 @@
 # Node.JS + React + GraphQL Movie App
+[Live demo](http://graphql-movieapp.surge.sh/)
 
 ## 1- Node.JS Server
 
