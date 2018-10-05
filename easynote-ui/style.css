@@ -13,26 +13,39 @@ ul{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .header {
     padding: 20px 0;
     text-align: center;
+    display: grid;
+    grid-template-columns: 40% auto;
 }
 
-.sub_header {
-    margin-bottom: 30px;
-    text-align: center;
+.header > div{
+
 }
-.sub_header__title {
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo__title {
     font-family: "Montserrat", sans-serif;
     text-align: center;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 30px;
     letter-spacing: 2px;
     margin: 0;
+    text-align: left;
 }
+
+.description{
+    margin:4rem 0 3rem 0;
+    text-align: center;
+}
+
 .sub_header__desc {
     font-family: "Roboto Mono", monospace;
     margin: 10px 0 0 0;
@@ -98,7 +111,7 @@ ul{
 }
 
 .header_menu{
-
+    text-align: right;
 }
 
 .header_menu > div{
@@ -108,7 +121,6 @@ ul{
 }
 
 .header_menu .active{
-    margin-top: 15px;
     padding: 8px;
     background: #fbf9bd;
     user-select: none;
