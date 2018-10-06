@@ -53,8 +53,7 @@ ul{
 }
 
 .sub_header__desc span{
-    text-decoration: underline;
-    text-decoration-color: #fbf9bd;
+    border-bottom: solid 4px #fbf9bd;
 }
 
 .add-note {
