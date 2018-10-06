@@ -34,7 +34,6 @@ ul{
 
 .logo__title {
     font-family: "Montserrat", sans-serif;
-    text-align: center;
     font-weight: 400;
     font-size: 30px;
     letter-spacing: 2px;
@@ -51,6 +50,11 @@ ul{
     font-family: "Roboto Mono", monospace;
     margin: 10px 0 0 0;
     color: rgba(0, 0, 0, 0.5);
+}
+
+.sub_header__desc span{
+    text-decoration: underline;
+    text-decoration-color: #fbf9bd;
 }
 
 .add-note {
@@ -84,7 +88,7 @@ ul{
     -ms-flex-align: center;
     align-items: center;
     display: grid;
-    background: #ecf0f1;
+    background: #f9fbfb;
     margin-bottom:3px;
     -webkit-animation: enter 400ms cubic-bezier(0.5, 0, 0.2, 1) backwards;
     animation: enter 400ms cubic-bezier(0.5, 0, 0.2, 1) backwards;
@@ -112,15 +116,18 @@ li:nth-child(5) {
 }
 
 .notes li > .title{
+    font-size: 12px;
     margin: 0!important;
     padding: .6rem;
     grid-row: 2/3;
+    color: #4c4444
 }
 
 .notes li > .date{
     padding: .6rem;
     grid-row: 1/-1;
     text-align: right;
+    color: #757575
 }
 
 .notes li .date span {
