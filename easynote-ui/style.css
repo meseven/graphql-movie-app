@@ -115,18 +115,18 @@ li:nth-child(5) {
 }
 
 .notes li > .title{
-    font-size: 12px;
+    font-size: 14px;
     margin: 0!important;
     padding: .6rem;
     grid-row: 2/3;
-    color: #4c4444
+    color: #796e6e
 }
 
 .notes li > .date{
     padding: .6rem;
     grid-row: 1/-1;
     text-align: right;
-    color: #757575
+    color: #757575;
 }
 
 .notes li .date span {
@@ -136,9 +136,9 @@ li:nth-child(5) {
 .counter {
     font-family: "Roboto Mono", monospace;
     text-align: center;
-    margin-top: 5px;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.3);
+    margin-top:14px
 }
 
 .header_menu{
