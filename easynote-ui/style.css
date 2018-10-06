@@ -3,7 +3,8 @@ body{
 }
 
 ul{
-    padding-inline-start: 0!important;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -68,7 +69,7 @@ ul{
 }
 
 .notes{
-
+    margin-top:20px
 }
 
 .notes li{
@@ -84,6 +85,7 @@ ul{
     align-items: center;
     display: grid;
     background: #ecf0f1;
+    margin-bottom:3px;
 }
 
 .notes li > .title{
