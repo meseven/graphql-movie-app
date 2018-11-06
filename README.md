@@ -11,8 +11,8 @@
 Clone this repo and go to server folder.
 
 ```ruby 
-cd server
-npm install
+$ cd server
+$ npm install
 ```
 
 ### Enviroment variables
@@ -25,7 +25,7 @@ MONGODB_CONNECTION_STRING = mongodb://<dbuser>:<dbpassword>@<dbhost>:<dbport>/<d
 
 ### Run the app
 ```ruby
-npm start // for locally
+$ npm start // for locally
 ```
 
 and go to [localhost:5000/graphql](http://localhost:5000/graphql)
@@ -36,13 +36,13 @@ and go to [localhost:5000/graphql](http://localhost:5000/graphql)
 
 Clone this repo and go to client folder.
 ```ruby 
-cd client
-npm install
+$ cd client
+$ npm install
 ```
 
 ### Run the app
 ```ruby 
-npm start
+$ npm start
 ```
 
 and go to [localhost:3000](http://localhost:3000/)
