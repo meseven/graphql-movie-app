@@ -1,7 +1,7 @@
 # Node.JS + React + GraphQL Movie App
 :neckbeard:   [Live demo React client](http://graphql-movieapp.surge.sh/)
 
-:sunglasses:  [GraphiQL Interface](http://54.86.4.87:5000/graphql)
+:sunglasses:  [GraphiQL Interface](http://18.206.204.162:5000/graphql)
 
 # Installation
 
